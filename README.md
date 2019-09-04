@@ -4,6 +4,9 @@ An iOS game I bought from Flippa.com, and modified further. I've published it so
 ## Programming Language
 Objective-C.
 
+## Version
+1.3.5
+
 ## License
 
 This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
