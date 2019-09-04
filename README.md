@@ -1,5 +1,5 @@
 # Summer Nail Salon
-An iOS game I bought from Flippa.com, and modified further. I've published it so that others who are interested may learn from it.
+An iOS game I bought from Flippa.com a good while ago, and modified further. I've published it so that others who are interested may learn from it.
 
 ## Programming Language
 Objective-C.
