@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="9060" systemVersion="15B42" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9051"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="StoreViewController">
+            <connections>
+                <outlet property="bannerView" destination="2G5-ek-rJv" id="ZCh-xV-ix7"/>
+                <outlet property="purchaseButton" destination="HkT-TR-ubK" id="JLM-2V-F6f"/>
+                <outlet property="removeAdsStatus" destination="gYd-kv-Wpz" id="rUF-lm-R2f"/>
+                <outlet property="view" destination="bQB-jU-4UQ" id="yWV-kc-JAS"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="bQB-jU-4UQ">
+            <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="spring water.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="SsI-0B-4FU">
+                    <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                    <animations/>
+                </imageView>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HkT-TR-ubK">
+                    <rect key="frame" x="8" y="285" width="584" height="30"/>
+                    <animations/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="30" id="oCW-6w-BQm"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" style="UICTFontTextStyleTitle1"/>
+                    <state key="normal" title="Remove Ads"/>
+                    <connections>
+                        <action selector="tapsRemoveAds" destination="-1" eventType="touchUpInside" id="DW0-sU-YEX"/>
+                    </connections>
+                </button>
+                <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Purchased" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gYd-kv-Wpz">
+                    <rect key="frame" x="8" y="308" width="584" height="21"/>
+                    <animations/>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="back.png" translatesAutoresizingMaskIntoConstraints="NO" id="XOD-n0-7eu">
+                    <rect key="frame" x="8" y="8" width="70" height="70"/>
+                    <animations/>
+                </imageView>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BXP-HV-XYz" userLabel="BackButton">
+                    <rect key="frame" x="8" y="8" width="70" height="70"/>
+                    <animations/>
+                    <connections>
+                        <action selector="StoreBackButton" destination="-1" eventType="touchUpInside" id="e9e-f8-3EF"/>
+                    </connections>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FXt-Z9-6xF" userLabel="Restore Button">
+                    <rect key="frame" x="259" y="451" width="82" height="77"/>
+                    <animations/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="82" id="dp8-di-A5H"/>
+                    </constraints>
+                    <connections>
+                        <action selector="restore" destination="-1" eventType="touchUpInside" id="4Aj-7I-Vjk"/>
+                    </connections>
+                </button>
+                <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="restore.png" translatesAutoresizingMaskIntoConstraints="NO" id="UXi-fQ-Qon">
+                    <rect key="frame" x="259" y="451" width="82" height="60"/>
+                    <animations/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="82" id="eLe-Bx-dgN"/>
+                    </constraints>
+                </imageView>
+                <view contentMode="scaleAspectFit" translatesAutoresizingMaskIntoConstraints="NO" id="2G5-ek-rJv" customClass="GADBannerView">
+                    <rect key="frame" x="0.0" y="550" width="600" height="50"/>
+                    <animations/>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                </view>
+            </subviews>
+            <animations/>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+            <constraints>
+                <constraint firstAttribute="trailing" secondItem="SsI-0B-4FU" secondAttribute="trailing" id="1Z9-Kw-L7O"/>
+                <constraint firstItem="2G5-ek-rJv" firstAttribute="top" secondItem="FXt-Z9-6xF" secondAttribute="bottom" constant="22" id="5hq-5Q-1Gu"/>
+                <constraint firstItem="SsI-0B-4FU" firstAttribute="centerX" secondItem="bQB-jU-4UQ" secondAttribute="centerX" id="6gu-u6-ls5"/>
+                <constraint firstItem="SsI-0B-4FU" firstAttribute="centerY" secondItem="bQB-jU-4UQ" secondAttribute="centerY" id="CQM-uJ-PLl"/>
+                <constraint firstItem="HkT-TR-ubK" firstAttribute="leading" secondItem="gYd-kv-Wpz" secondAttribute="leading" id="Dy6-Fp-xVc"/>
+                <constraint firstItem="HkT-TR-ubK" firstAttribute="leading" secondItem="BXP-HV-XYz" secondAttribute="leading" id="E0r-Bf-Oq1"/>
+                <constraint firstItem="FXt-Z9-6xF" firstAttribute="top" secondItem="UXi-fQ-Qon" secondAttribute="top" id="JGd-in-koK"/>
+                <constraint firstItem="FXt-Z9-6xF" firstAttribute="centerX" secondItem="UXi-fQ-Qon" secondAttribute="centerX" id="KVa-Ff-Ysx"/>
+                <constraint firstItem="UXi-fQ-Qon" firstAttribute="top" secondItem="SsI-0B-4FU" secondAttribute="bottom" constant="-149" id="Lkx-Jw-lFA"/>
+                <constraint firstItem="XOD-n0-7eu" firstAttribute="top" secondItem="bQB-jU-4UQ" secondAttribute="top" constant="8" id="O5w-6p-iv3"/>
+                <constraint firstItem="2G5-ek-rJv" firstAttribute="top" secondItem="UXi-fQ-Qon" secondAttribute="bottom" constant="39" id="PTJ-hE-keP"/>
+                <constraint firstItem="SsI-0B-4FU" firstAttribute="top" secondItem="bQB-jU-4UQ" secondAttribute="top" id="QoC-R6-zuY"/>
+                <constraint firstAttribute="trailing" secondItem="2G5-ek-rJv" secondAttribute="trailing" id="TSB-ll-OPk"/>
+                <constraint firstItem="BXP-HV-XYz" firstAttribute="width" secondItem="XOD-n0-7eu" secondAttribute="width" id="VHG-q0-qiY"/>
+                <constraint firstItem="SsI-0B-4FU" firstAttribute="leading" secondItem="bQB-jU-4UQ" secondAttribute="leading" id="Vku-U5-8Fu"/>
+                <constraint firstItem="XOD-n0-7eu" firstAttribute="leading" secondItem="bQB-jU-4UQ" secondAttribute="leading" constant="8" id="b6n-u2-LXD"/>
+                <constraint firstItem="HkT-TR-ubK" firstAttribute="centerY" secondItem="SsI-0B-4FU" secondAttribute="centerY" id="cyx-Wx-VaX"/>
+                <constraint firstItem="UXi-fQ-Qon" firstAttribute="centerX" secondItem="bQB-jU-4UQ" secondAttribute="centerX" id="ee8-JZ-Cf5"/>
+                <constraint firstItem="2G5-ek-rJv" firstAttribute="leading" secondItem="bQB-jU-4UQ" secondAttribute="leading" id="iG3-75-RpC"/>
+                <constraint firstItem="HkT-TR-ubK" firstAttribute="trailing" secondItem="gYd-kv-Wpz" secondAttribute="trailing" id="kXd-RO-pZl"/>
+                <constraint firstItem="BXP-HV-XYz" firstAttribute="height" secondItem="XOD-n0-7eu" secondAttribute="height" id="lhE-W4-MJf"/>
+                <constraint firstAttribute="bottom" secondItem="2G5-ek-rJv" secondAttribute="bottom" id="mlk-1Q-Ug5"/>
+                <constraint firstItem="HkT-TR-ubK" firstAttribute="centerX" secondItem="UXi-fQ-Qon" secondAttribute="centerX" id="mpr-UB-FwA"/>
+                <constraint firstAttribute="bottom" secondItem="SsI-0B-4FU" secondAttribute="bottom" id="mu7-e8-8xK"/>
+                <constraint firstItem="gYd-kv-Wpz" firstAttribute="top" secondItem="HkT-TR-ubK" secondAttribute="bottom" constant="-7" id="oZn-is-tEH"/>
+                <constraint firstItem="BXP-HV-XYz" firstAttribute="top" secondItem="bQB-jU-4UQ" secondAttribute="top" constant="8" id="qh1-cu-0qJ"/>
+                <constraint firstItem="BXP-HV-XYz" firstAttribute="leading" secondItem="bQB-jU-4UQ" secondAttribute="leading" constant="8" id="vuy-3d-Oi2"/>
+                <constraint firstItem="2G5-ek-rJv" firstAttribute="top" secondItem="SsI-0B-4FU" secondAttribute="bottom" constant="-50" id="zYJ-6C-wMx"/>
+            </constraints>
+            <point key="canvasLocation" x="297" y="506"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="back.png" width="70" height="70"/>
+        <image name="restore.png" width="70" height="41"/>
+        <image name="spring water.jpg" width="2001" height="708"/>
+    </resources>
+</document>
